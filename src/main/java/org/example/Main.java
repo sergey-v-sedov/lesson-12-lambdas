@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.ToDoubleBiFunction;
 
@@ -33,6 +34,14 @@ public class Main {
 
 
 
+        // Императивный подход
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {
+            String v = it.next();
+            System.out.println(v);
+        }
 
+        // Декларативный подход
+        list.forEach(System.out::println);
     }
 }
