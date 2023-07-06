@@ -8,11 +8,13 @@ public class Main {
         Calculator calculator = new Calculator();
 
         calculator.inputArguments(4.0, 5.0);
-        ToDoubleBiFunction<Double, Double> pow = new PowOperation();
-        calculator.makeOperation(pow);
+        calculator.makeOperation((arg1, arg2) -> Math.pow(arg1, arg2));
 
-        calculator.inputArguments(4.0, 5.0);
-        ToDoubleBiFunction<Double, Double> sum = new SumOperation();
-        calculator.makeOperation(sum);
+        calculator.inputArguments(5.0, 5.0);
+        calculator.makeOperation((arg1, arg2) -> arg1 + arg2);
+
+        calculator.makeOperation((arg1, arg2) -> arg1 % arg2);
+
+        calculator.makeOperation((arg1, arg2) -> arg1 / arg2);
     }
 }
