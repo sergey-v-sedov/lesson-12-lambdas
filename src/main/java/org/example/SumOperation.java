@@ -1,8 +1,11 @@
 package org.example;
 
-public class SumOperation implements Operation {
+import java.util.function.ToDoubleBiFunction;
+
+public class SumOperation implements ToDoubleBiFunction<Double, Double> {
+
     @Override
-    public Double calculate(Double arg1, Double arg2) {
+    public double applyAsDouble(Double arg1, Double arg2) {
         return arg1 + arg2;
     }
 }

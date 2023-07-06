@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.function.ToDoubleBiFunction;
+
 public class Calculator {
     Double arg1;
     Double arg2;
@@ -20,8 +22,8 @@ public class Calculator {
         }
     }
 
-    public void makeOperation(Operation operation) {
-        result = operation.calculate(arg1, arg2);
+    public void makeOperation(ToDoubleBiFunction<Double, Double> operation) {
+        result = operation.applyAsDouble(arg1, arg2);
         System.out.println("Операция " + operation + " успешно применена к аргументам");
         printResult();
     }
