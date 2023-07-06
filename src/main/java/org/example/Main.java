@@ -43,5 +43,7 @@ public class Main {
 
         // Декларативный подход
         list.forEach(System.out::println);
+
+        TextProcessor.testTextProcessor();
     }
 }
